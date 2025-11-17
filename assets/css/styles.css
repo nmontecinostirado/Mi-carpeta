@@ -1,0 +1,64 @@
+/* Ejercicio 2: color de fondo del cuerpo completo */
+body {
+  body {
+  background-color: lightblue;
+  font-family: Arial, sans-serif;
+}
+
+.img-principal {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+}
+
+/* Ejercicio 3: títulos en color rojo */
+h1, h2 {
+  color: red;
+}
+
+/* Ejercicio 4: imagen centrada, tamaño 400x300 , CAMBIA TODAS LAS IMAGENES A ESTO*/
+
+img {
+  width: 400px;
+  height: 300px;
+  display: block;       /* convierte la imagen en elemento de bloque */
+  margin: 0 auto;       /* centra la imagen horizontalmente */
+}
+#btnArriba {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 999;
+  pointer-events: none; /* inhabilitado por defecto */
+}
+
+/* clase que activa la visibilidad */
+#btnArriba.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* ajuste para versiones móviles (si quieres) */
+@media (max-width: 576px) {
+  #btnArriba {
+    right: 12px;
+    bottom: 12px;
+    width: 44px;
+    height: 44px;
+  }
+}
